@@ -4,6 +4,7 @@ import {
   getProfile,
   updateProfile,
   deleteProfile,
+  getProfilesByIdUser,
 } from '../service/profile.service.js';
 
 const router = express.Router();
@@ -23,6 +24,16 @@ router.post('/', async (req, res) => {
 // Read
 router.get('/:IdCoSo', async (req, res) => {
   const result = await getProfile(req.params.IdCoSo);
+  if (result) {
+    res.status(200).json(result);
+  } else {
+    res.status(404).json({ message: 'Profile not found' });
+  }
+});
+
+//Read
+router.get('/user/:IdNguoiDung', async (req, res) => {
+  const result = await getProfilesByIdUser(req.params.IdNguoiDung);
   if (result) {
     res.status(200).json(result);
   } else {

@@ -91,16 +91,26 @@ export const createProfile = async (profile) => {
 export const getProfile = async (IdCoSo) => {
   const sqlSelectCoSo = `
     SELECT 
-      cs.IdCoSo, cs.TenCoSo, cs.DiaChi, cs.IdPhuongXa, cs.IdLoaiHinhKinhDoanh,
-      px.TenPhuongXa, qh.TenQuanHuyen,
-      lhk.TenLoaiHinhKinhDoanh,
-      gcn.NgayDangKy, gcn.LoaiThucPham, gcn.HinhAnhMinhHoa, gcn.TrangThai, gcn.NgayCapChungNhanATTP, gcn.NgayHetHanChungNhanATTP
-    FROM CoSo cs
-    JOIN PhuongXa px ON cs.IdPhuongXa = px.IdPhuongXa
-    JOIN QuanHuyen qh ON px.IdQuanHuyen = qh.IdQuanHuyen
-    JOIN LoaiHinhKinhDoanh lhk ON cs.IdLoaiHinhKinhDoanh = lhk.IdLoaiHinhKinhDoanh
-    LEFT JOIN GiayChungNhanATTP gcn ON cs.IdCoSo = gcn.IdCoSo
-    WHERE cs.IdCoSo = ?
+    cs.IdCoSo, cs.TenCoSo, cs.DiaChi, cs.IdPhuongXa, cs.IdLoaiHinhKinhDoanh, cs.SoGiayPhepKD, cs.NgayCapGiayPhepKD,
+    px.TenPhuongXa, px.IdQuanHuyen, qh.TenQuanHuyen,
+    lhk.TenLoaiHinhKinhDoanh, 
+    gcn.NgayDangKy, gcn.LoaiThucPham, gcn.HinhAnhMinhHoa, gcn.TrangThai, gcn.NgayCapChungNhanATTP, gcn.NgayHetHanChungNhanATTP,
+    nd.HoTen AS TenNguoiDung -- Thêm cột TenNguoiDung từ bảng NguoiDung
+FROM 
+    CoSo cs
+JOIN 
+    PhuongXa px ON cs.IdPhuongXa = px.IdPhuongXa
+JOIN 
+    QuanHuyen qh ON px.IdQuanHuyen = qh.IdQuanHuyen
+JOIN 
+    LoaiHinhKinhDoanh lhk ON cs.IdLoaiHinhKinhDoanh = lhk.IdLoaiHinhKinhDoanh
+LEFT JOIN 
+    GiayChungNhanATTP gcn ON cs.IdCoSo = gcn.IdCoSo
+JOIN 
+    NguoiDung nd ON cs.IdChuCoSo = nd.IdNguoiDung -- Thêm JOIN để kết hợp bảng NguoiDung
+WHERE 
+    cs.IdCoSo = ?;
+
   `;
 
   try {
@@ -111,100 +121,92 @@ export const getProfile = async (IdCoSo) => {
   }
 };
 
+export const getProfilesByIdUser = async (IdNguoiDung) => {
+  const slqNguoiDung = `SELECT 
+    NguoiDung.IdNguoiDung,
+    NguoiDung.HoTen,
+    NguoiDung.CCCD,
+    NguoiDung.SDT,
+    NguoiDung.MatKhau,
+    NguoiDung.IdChucVu,
+    NguoiDung.TrangThai,
+    CoSo.IdCoSo,
+    CoSo.TenCoSo,
+    CoSo.DiaChi,
+    CoSo.IdPhuongXa,
+    PhuongXa.TenPhuongXa,
+    PhuongXa.IdQuanHuyen,
+    QuanHuyen.TenQuanHuyen,
+    CoSo.IdLoaiHinhKinhDoanh,
+    LoaiHinhKinhDoanh.TenLoaiHinhKinhDoanh,
+    CoSo.SoGiayPhepKD,
+    CoSo.NgayCapGiayPhepKD
+FROM 
+    NguoiDung
+LEFT JOIN 
+    CoSo ON NguoiDung.IdNguoiDung = CoSo.IdChuCoSo
+LEFT JOIN 
+    PhuongXa ON CoSo.IdPhuongXa = PhuongXa.IdPhuongXa
+LEFT JOIN 
+    QuanHuyen ON PhuongXa.IdQuanHuyen = QuanHuyen.IdQuanHuyen
+LEFT JOIN 
+    LoaiHinhKinhDoanh ON CoSo.IdLoaiHinhKinhDoanh = LoaiHinhKinhDoanh.IdLoaiHinhKinhDoanh
+Where
+    NguoiDung.IdNguoiDung = ? `;
+  try {
+    const [result] = await db.query(slqNguoiDung, [IdNguoiDung]);
+    return result.length ? result : null;
+  } catch (error) {
+    console.log(error);
+    return { success: false, error: error.message };
+  }
+};
+
 // Update
 export const updateProfile = async (profile) => {
   const {
     IdCoSo,
     TenCoSo,
     DiaChi,
+    IdQuanHuyen,
     IdPhuongXa,
     IdLoaiHinhKinhDoanh,
-    IdGiayChungNhan,
-    NgayDangKy,
-    LoaiThucPham,
-    HinhAnhMinhHoa,
-    TrangThai,
-    NgayCapChungNhanATTP,
-    NgayHetHanChungNhanATTP,
-    TenPhuongXa,
-    IdQuanHuyen,
-    TenQuanHuyen,
+    SoGiayPhepKD,
+    NgayCapGiayPhepKD,
   } = profile;
 
-  const sqlUpdateCoSo = `
+  const sqlUpdateProfile = `
     UPDATE CoSo
-    SET TenCoSo = ?, DiaChi = ?, IdPhuongXa = ?, IdLoaiHinhKinhDoanh = ?
-    WHERE IdCoSo = ?
+    JOIN PhuongXa ON CoSo.IdPhuongXa = PhuongXa.IdPhuongXa
+    JOIN QuanHuyen ON PhuongXa.IdQuanHuyen = QuanHuyen.IdQuanHuyen
+    JOIN LoaiHinhKinhDoanh ON CoSo.IdLoaiHinhKinhDoanh = LoaiHinhKinhDoanh.IdLoaiHinhKinhDoanh
+    SET 
+      CoSo.TenCoSo = ?, 
+      CoSo.DiaChi = ?, 
+      CoSo.IdPhuongXa = ?, 
+      CoSo.IdLoaiHinhKinhDoanh = ?, 
+      PhuongXa.IdQuanHuyen = ?, 
+      CoSo.SoGiayPhepKD = ?, 
+      CoSo.NgayCapGiayPhepKD = ?
+    WHERE CoSo.IdCoSo = ?
   `;
-
-  const sqlUpdatePhuongXa = `
-    UPDATE PhuongXa
-    SET TenPhuongXa = ?, IdQuanHuyen = ?
-    WHERE IdPhuongXa = ?
-  `;
-
-  const sqlUpdateQuanHuyen = `
-    UPDATE QuanHuyen
-    SET TenQuanHuyen = ?
-    WHERE IdQuanHuyen = ?
-  `;
-
-  const sqlUpdateGiayChungNhanATTP = `
-    UPDATE GiayChungNhanATTP
-    SET NgayDangKy = ?, LoaiThucPham = ?, HinhAnhMinhHoa = ?, TrangThai = ?, NgayCapChungNhanATTP = ?, NgayHetHanChungNhanATTP = ?
-    WHERE IdGiayChungNhan = ?
-  `;
-
-  const updateQuery = async (query, values) => {
-    return new Promise((resolve, reject) => {
-      db.query(query, values, (err, result) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(result.affectedRows);
-        }
-      });
-    });
-  };
 
   try {
-    if (TenPhuongXa && IdPhuongXa) {
-      await updateQuery(sqlUpdatePhuongXa, [
-        TenPhuongXa,
-        IdQuanHuyen,
-        IdPhuongXa,
-      ]);
-    }
-
-    if (TenQuanHuyen && IdQuanHuyen) {
-      await updateQuery(sqlUpdateQuanHuyen, [TenQuanHuyen, IdQuanHuyen]);
-    }
-
-    if (TenCoSo && IdCoSo) {
-      await updateQuery(sqlUpdateCoSo, [
-        TenCoSo,
-        DiaChi,
-        IdPhuongXa,
-        IdLoaiHinhKinhDoanh,
-        IdCoSo,
-      ]);
-    }
-
-    if (IdGiayChungNhan && NgayDangKy) {
-      await updateQuery(sqlUpdateGiayChungNhanATTP, [
-        NgayDangKy,
-        LoaiThucPham,
-        HinhAnhMinhHoa,
-        TrangThai,
-        NgayCapChungNhanATTP,
-        NgayHetHanChungNhanATTP,
-        IdGiayChungNhan,
-      ]);
-    }
+    await db.query(sqlUpdateProfile, [
+      TenCoSo,
+      DiaChi,
+      IdPhuongXa,
+      IdLoaiHinhKinhDoanh,
+      IdQuanHuyen,
+      SoGiayPhepKD,
+      NgayCapGiayPhepKD,
+      IdCoSo,
+    ]);
 
     return { success: true };
-  } catch (err) {
-    return { success: false, error: err.message };
+  } catch (error) {
+    console.log(error);
+    throw new Error('Internal Server Error');
   }
 };
 
