@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navigation.css';
 import { jwtDecode } from 'jwt-decode';
+import logo from '../../Assets/Logo.jpg';
 
 const Navigation = () => {
   const [decodedToken, setDecodedToken] = useState(null);
@@ -92,6 +93,10 @@ const Navigation = () => {
     >
       <div className="h-full w-2/3 flex flex-col justify-between bg-[#0cb306] p-2 ">
         <div className="flex flex-col justify-center gap-y-6">
+          <Link to="/" className="flex items-center justify-center mt-4">
+            <img src={logo} alt="" className="w-[30%] rounded-full" />
+          </Link>
+
           {/* Home */}
           <Link
             to="/"
@@ -411,7 +416,7 @@ const Navigation = () => {
 
               {/* plan */}
               <Link
-                to="/KeHoach"
+                to="/"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -438,24 +443,28 @@ const Navigation = () => {
                 </span>
                 {''}
                 <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
-                  <Link
-                    to="/KeHoachThanhTra"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Thanh Tra
-                  </Link>
-                  <Link
-                    to="/KeHoachKiemTraViPham"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Kiểm Tra Vi Phạm
-                  </Link>
+                  {decodedToken && (
+                    <>
+                      <Link
+                        to={`/PlanThanhTra`}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Thanh Tra
+                      </Link>
+                      <Link
+                        to={`/PlanKiemTra`}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Kiểm Tra Vi Phạm
+                      </Link>
+                    </>
+                  )}
                 </div>
               </Link>
 
               {/* create report */}
               <Link
-                to="/BaoCao"
+                to="/o"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -475,13 +484,13 @@ const Navigation = () => {
                 {''}
                 <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
-                    to="/TaoBaoCaoThanhTra"
+                    to="/ReportTT"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Thanh Tra
                   </Link>
                   <Link
-                    to="/TaoBaoCaoKiemTraViPham"
+                    to="/ReportKTVP"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Kiểm Tra Vi Phạm

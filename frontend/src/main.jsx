@@ -10,6 +10,10 @@ import Home from '../src/Home.jsx';
 import ListProfile from '../pages/user/Profile/ListProfile.jsx';
 import Profile from '../pages/user/Profile/Profile.jsx';
 import UpdateProfile from '../pages/user/Profile/UpdateProfile.jsx';
+import PlanTT from '../pages/user/Plan/PlanTT.jsx';
+import PlanKTVP from '../pages/user/Plan/PlanKTVP.jsx';
+import PlanTT_Report from '../pages/user/Plan/PlanTT_Report.jsx';
+import PlanKTVP_Report from '../pages/user/Plan/PlanKTVP_Report.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +24,10 @@ const router = createBrowserRouter(
       <Route path="/listProfile" element={<ListProfile />} />
       <Route path="/facility/:id" element={<Profile />} />
       <Route path="/updateProfile/:id" element={<UpdateProfile />} />
+      <Route path="/PlanThanhTra" element={<PlanTT />} />
+      <Route path="/PlanKiemTra" element={<PlanKTVP />} />
+      <Route path="/ReportTT" element={<PlanTT_Report />} />
+      <Route path="/ReportKTVP" element={<PlanKTVP_Report />} />
     </Route>
   )
 );
