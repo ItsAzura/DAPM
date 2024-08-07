@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
+import { Link } from 'react-router-dom';
 
 const PlanKTVP = () => {
   const [user, setUser] = useState({});
@@ -60,7 +61,7 @@ const PlanKTVP = () => {
                 type="submit"
                 className="ml-[80%] w-1/5 bg-[#0cb306]  text-white px-4 py-2 rounded cursor-pointer transition-all duration-300 ease-in-out hover:scale-110"
               >
-                Tạo Báo Cáo
+                <Link to={`/createReport/${p.IdKeHoach}`}>Tạo Báo Cáo</Link>
               </button>
             </div>
           </li>

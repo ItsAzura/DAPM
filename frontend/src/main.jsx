@@ -14,6 +14,8 @@ import PlanTT from '../pages/user/Plan/PlanTT.jsx';
 import PlanKTVP from '../pages/user/Plan/PlanKTVP.jsx';
 import PlanTT_Report from '../pages/user/Plan/PlanTT_Report.jsx';
 import PlanKTVP_Report from '../pages/user/Plan/PlanKTVP_Report.jsx';
+import CreateReport from '../pages/user/Report/CreateReport.jsx';
+import CreatePDF from '../pages/user/Report/createPDF.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +30,8 @@ const router = createBrowserRouter(
       <Route path="/PlanKiemTra" element={<PlanKTVP />} />
       <Route path="/ReportTT" element={<PlanTT_Report />} />
       <Route path="/ReportKTVP" element={<PlanKTVP_Report />} />
+      <Route path="/createReport/:id" element={<CreateReport />} />
+      <Route path="/createPDF" element={<CreatePDF />} />
     </Route>
   )
 );

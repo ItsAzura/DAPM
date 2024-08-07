@@ -37,8 +37,8 @@ router.put('/report', async (req, res) => {
   }
 });
 
-router.get('/report/:IdChiTietKetQua', async (req, res) => {
-  const result = await getReport(req.params.IdChiTietKetQua);
+router.get('/report/:IdKeHoach', async (req, res) => {
+  const result = await getReport(req.params.IdKeHoach);
   if (result.success) {
     res.status(200).json(result.report);
   } else if (result.message === 'Report not found') {

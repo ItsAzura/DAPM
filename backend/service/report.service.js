@@ -7,6 +7,12 @@ export const createReport = async (report) => {
     VALUES (?, ?, ?, ?)
   `;
 
+  const sqlUpdateKeHoach = `
+    UPDATE KeHoach
+    SET TrangThai = 2
+    WHERE IdKeHoach = ?
+  `;
+
   try {
     const result = await db.query(sqlInsert, [
       IdKeHoach,
@@ -14,6 +20,9 @@ export const createReport = async (report) => {
       HinhAnhMinhChung,
       CoViPham,
     ]);
+
+    await db.query(sqlUpdateKeHoach, [IdKeHoach]);
+
     return { success: true, insertId: result.insertId };
   } catch (error) {
     console.log(error);
@@ -43,7 +52,7 @@ export const updateReport = async (report) => {
   }
 };
 
-export const getReport = async (IdChiTietKetQua) => {
+export const getReport = async (IdKeHoach) => {
   const sqlSelectReport = `
     SELECT 
     ctkq.IdChiTietKetQua, ctkq.NoiDung AS NoiDungKetQua, ctkq.HinhAnhMinhChung, ctkq.CoViPham, 
@@ -65,11 +74,11 @@ export const getReport = async (IdChiTietKetQua) => {
   LEFT JOIN DoanThamDinh dtd ON dtdkh.IdDoanThamDinh = dtd.IdDoanThamDinh
   LEFT JOIN DanhSachThanhVien dstv ON dtd.IdDoanThamDinh = dstv.IdDoanThamDinh
   LEFT JOIN NguoiDung nd3 ON dstv.IdCanBo = nd3.IdNguoiDung
-  WHERE ctkq.IdChiTietKetQua = ?;
+  WHERE kh.IdKeHoach = ?;
   `;
 
   try {
-    const [result] = await db.query(sqlSelectReport, [IdChiTietKetQua]);
+    const [result] = await db.query(sqlSelectReport, [IdKeHoach]);
     if (result.length === 0) {
       return { success: false, message: 'Report not found' };
     }
