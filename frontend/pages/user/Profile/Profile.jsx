@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Profile = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [currernfacility, setCurrernfacility] = useState(null);
 
   const fetchFacility = async () => {
@@ -51,10 +52,13 @@ const Profile = () => {
         </p>
       </div>
       <div className="flex flex-row gap-8">
-        <button className="bg-[#ff5e5e] text-white px-4 py-2 rounded cursor-pointer my-4">
+        <button
+          onClick={() => navigate(-1)}
+          className="bg-[#ff5e5e] text-white px-4 py-2 rounded cursor-pointer my-4  transition-all duration-300 ease-in-out hover:scale-110"
+        >
           Quay Lại
         </button>
-        <button className="bg-[#0cb306] text-white px-4 py-2 rounded cursor-pointer my-4">
+        <button className="bg-[#0cb306] text-white px-4 py-2 rounded cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110">
           <Link to={`/updateProfile/${id}`}>Cập Nhật</Link>
         </button>
       </div>

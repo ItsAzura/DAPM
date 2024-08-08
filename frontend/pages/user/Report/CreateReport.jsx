@@ -35,6 +35,11 @@ const CreateReport = () => {
       setFilePath(uploadedFilePath);
     }
 
+    if (!IdKeHoach || !NoiDung || !file) {
+      toast.error('Vui lòng nhập đầy đủ thông tin');
+      return;
+    }
+
     const formData = {
       IdKeHoach,
       NoiDung,
@@ -127,12 +132,21 @@ const CreateReport = () => {
             <option value="false">Không</option>
           </select>
         </div>
-        <button
-          type="submit"
-          className="p-2 bg-[#0cb306] text-white rounded-md w-1/4 cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 "
-        >
-          Tạo Báo Cáo
-        </button>
+        <div className="flex gap-4">
+          <button
+            type="submit"
+            className="p-2 bg-[#0cb306] text-white rounded-md  cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 "
+          >
+            Tạo Báo Cáo
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="p-2 bg-[#ff5e5e] text-white rounded-md cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 "
+          >
+            Huỷ
+          </button>
+        </div>
       </form>
     </div>
   );

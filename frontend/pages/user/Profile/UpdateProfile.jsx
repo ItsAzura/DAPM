@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [currernfacility, setCurrernfacility] = useState(null);
 
@@ -112,7 +113,7 @@ const UpdateProfile = () => {
       const data = await res.json();
       toast.success('Cập nhật hồ sơ thành công');
       setTimeout(() => {
-        window.location.href = `http://localhost:5173/facility/${IdCoSo}`;
+        navigate(-1);
       }, 3000);
     } catch (error) {
       console.log(error);
@@ -136,7 +137,7 @@ const UpdateProfile = () => {
                 type="text"
                 id="idCoSo"
                 value={IdCoSo}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded "
                 readOnly
               />
             </div>
@@ -149,7 +150,7 @@ const UpdateProfile = () => {
                 id="tenCoSo"
                 value={TenCoSo}
                 onChange={(e) => setTenCoSo(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               />
             </div>
             <div>
@@ -160,7 +161,7 @@ const UpdateProfile = () => {
                 type="text"
                 id="chuCoSo"
                 value={ChuCoSo}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded "
                 readOnly
               />
             </div>
@@ -173,7 +174,7 @@ const UpdateProfile = () => {
                 id="diaChi"
                 value={DiaChi}
                 onChange={(e) => setDiaChi(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               />
             </div>
             <div>
@@ -185,7 +186,7 @@ const UpdateProfile = () => {
                 id="QuanHuyen"
                 value={IdQuanHuyen}
                 onChange={(e) => setIdQuanHuyen(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               >
                 {QuanHuyenSelector &&
                   QuanHuyenSelector.map((qh, i) => (
@@ -204,7 +205,7 @@ const UpdateProfile = () => {
                 id="PhuongXa"
                 value={IdPhuongXa}
                 onChange={(e) => setIdPhuongXa(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               >
                 {PhuongXaSelector &&
                   PhuongXaSelector.map((px, i) => (
@@ -226,7 +227,7 @@ const UpdateProfile = () => {
                 id="loaiHinhKinhDoanh"
                 value={IdLoaiHinhKinhDoanh}
                 onChange={(e) => setIdLoaiHinhKinhDoanh(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               >
                 {KDSelector &&
                   KDSelector.map((kd, i) => (
@@ -245,7 +246,7 @@ const UpdateProfile = () => {
                 id="SoGiayPhepKD"
                 value={SoGiayPhepKD}
                 onChange={(e) => setSoGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               />
             </div>
             <div>
@@ -260,7 +261,7 @@ const UpdateProfile = () => {
                 id="NgayCapGiayPhepKD"
                 value={NgayCapGiayPhepKD}
                 onChange={(e) => setNgayCapGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
               />
             </div>
             <div>
@@ -271,7 +272,7 @@ const UpdateProfile = () => {
                 type="date"
                 id="ngayCapATTP"
                 value={NgayCapATTP}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  "
                 readOnly
               />
             </div>
@@ -286,7 +287,7 @@ const UpdateProfile = () => {
                 type="date"
                 id="ngayHetHanATTP"
                 value={NgayHetHanATTP}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded  "
                 readOnly
               />
             </div>
@@ -294,13 +295,14 @@ const UpdateProfile = () => {
           <div className="mt-6 flex justify-center space-x-4">
             <button
               type="submit"
-              className="bg-[#0cb306] text-white py-2 px-4 rounded hover:bg-gray-800"
+              className="bg-[#0cb306] text-white py-2 px-4 cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 rounded"
             >
               Cập nhật
             </button>
             <button
               type="button"
-              className="bg-[#ff5e5e] text-white py-2 px-4 rounded hover:bg-gray-600"
+              onClick={() => navigate(-1)}
+              className="bg-[#ff5e5e] text-white py-2 px-4 cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 rounded"
             >
               Hủy
             </button>
