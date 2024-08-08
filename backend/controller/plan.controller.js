@@ -4,6 +4,8 @@ import {
   getPlanKiemTraByIdUser,
   getPlanThanhTraByIdUserDone,
   getPlanKiemTraByIdUserDone,
+  getPlanKiemTraByIdUserDone2,
+  getPlanThanhTraByIdUserDone2,
 } from '../service/plan.service.js';
 
 const router = express.Router();
@@ -49,6 +51,32 @@ router.get('/PlanThanhTraDone/:IdNguoiDung', async (req, res) => {
 
 router.get('/PlanKiemTraDone/:IdNguoiDung', async (req, res) => {
   const result = await getPlanKiemTraByIdUserDone(req.params.IdNguoiDung);
+  if (result.success) {
+    res.status(200).json(result.plan);
+  } else if (result.message === 'Plan not found') {
+    res.status(404).json({ message: 'Plan not found' });
+  } else {
+    res
+      .status(500)
+      .json({ message: 'Error getting plan', error: result.error });
+  }
+});
+
+router.get('/PlanThanhTraDone2/:IdNguoiDung', async (req, res) => {
+  const result = await getPlanThanhTraByIdUserDone2(req.params.IdNguoiDung);
+  if (result.success) {
+    res.status(200).json(result.plan);
+  } else if (result.message === 'Plan not found') {
+    res.status(404).json({ message: 'Plan not found' });
+  } else {
+    res
+      .status(500)
+      .json({ message: 'Error getting plan', error: result.error });
+  }
+});
+
+router.get('/PlanKiemTraDone2/:IdNguoiDung', async (req, res) => {
+  const result = await getPlanKiemTraByIdUserDone2(req.params.IdNguoiDung);
   if (result.success) {
     res.status(200).json(result.plan);
   } else if (result.message === 'Plan not found') {

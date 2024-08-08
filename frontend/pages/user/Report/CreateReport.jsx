@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const CreateReport = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [IdKeHoach, setIdKeHoach] = useState('');
   const [NoiDung, setNoiDung] = useState('');
@@ -53,6 +55,7 @@ const CreateReport = () => {
       const data = await res.json();
       console.log(data);
       toast.success('Tạo báo cáo thành công');
+      navigate(`/createPDF/${IdKeHoach}`);
     } catch (error) {
       console.log(error);
       toast.error('Tạo báo cáo thất bại');
@@ -94,7 +97,7 @@ const CreateReport = () => {
             name="NoiDung"
             value={NoiDung}
             onChange={(e) => setNoiDung(e.target.value)}
-            className="p-2 border border-gray-300 rounded-md"
+            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -106,7 +109,7 @@ const CreateReport = () => {
             id="file"
             name="file"
             onChange={(e) => setFile(e.target.files[0])}
-            className="p-2 border border-gray-300 rounded-md"
+            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -118,7 +121,7 @@ const CreateReport = () => {
             name="CoViPham"
             value={CoViPham}
             onChange={(e) => setCoViPham(e.target.value === 'true')}
-            className="p-2 border border-gray-300 rounded-md"
+            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
           >
             <option value="true">Có</option>
             <option value="false">Không</option>
@@ -126,7 +129,7 @@ const CreateReport = () => {
         </div>
         <button
           type="submit"
-          className="p-2 bg-[#0cb306] text-white rounded-md w-1/4 "
+          className="p-2 bg-[#0cb306] text-white rounded-md w-1/4 cursor-pointer my-4 transition-all duration-300 ease-in-out hover:scale-110 "
         >
           Tạo Báo Cáo
         </button>

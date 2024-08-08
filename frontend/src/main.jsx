@@ -31,7 +31,7 @@ const router = createBrowserRouter(
       <Route path="/ReportTT" element={<PlanTT_Report />} />
       <Route path="/ReportKTVP" element={<PlanKTVP_Report />} />
       <Route path="/createReport/:id" element={<CreateReport />} />
-      <Route path="/createPDF" element={<CreatePDF />} />
+      <Route path="/createPDF/:id" element={<CreatePDF />} />
     </Route>
   )
 );
