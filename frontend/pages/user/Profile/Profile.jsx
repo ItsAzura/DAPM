@@ -14,8 +14,11 @@ const Profile = () => {
   };
 
   const formatDate = (dateString) => {
+    if (!dateString) return 'Invalid Date';
+    const date = new Date(dateString);
+    if (isNaN(date)) return 'Invalid Date';
     const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-    return new Date(dateString).toLocaleDateString('vi-VN', options);
+    return date.toLocaleDateString('vi-VN', options);
   };
 
   useEffect(() => {
@@ -40,7 +43,7 @@ const Profile = () => {
         <p>Số Giấy Phép Kinh Doanh: {currernfacility?.SoGiayPhepKD}</p>
         <p>
           Ngày Cấp Giấy Phép Kinh Doanh:{' '}
-          {formatDate(currernfacility?.NgayCapGiayPhep)}
+          {formatDate(currernfacility?.NgayCapGiayPhepKD)}
         </p>
         <p>
           Ngày Cấp Chứng Nhận ATTP:{' '}

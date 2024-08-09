@@ -711,7 +711,7 @@ const Navigation = () => {
 
           {dropdownOpen && userInfo && (
             <ul
-              className={`absolute mr-4 bottom-6  space-y-2 rounded bg-[#09080d] text-white ${
+              className={`absolute left-0  bottom-6   bg-[#0cb306] text-white border-solid border border-gray-300 rounded shadow-lg ${
                 !userInfo.isAdmin ? '-top-24' : '-top-100'
               } `}
             >
