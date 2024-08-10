@@ -134,7 +134,7 @@ const Navigation = () => {
               {' '}
               {/* Search Profile */}
               <Link
-                to="/TimKiemHoSo"
+                to="/SearchUser"
                 className="flex items-center transition-transform transform hover:translate-x-2"
               >
                 <svg
@@ -157,7 +157,7 @@ const Navigation = () => {
               </Link>
               {/* Manage Profile */}
               <Link
-                to="/QuanLyHoSo"
+                to="/"
                 className="relative flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -177,13 +177,13 @@ const Navigation = () => {
                 </span>
                 <div className="absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg w-48 z-100 ">
                   <Link
-                    to="/DuyetTaiKhoan"
+                    to="/Approve"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Duyệt Tài Khoản
                   </Link>
                   <Link
-                    to="/QuanLyTaiKhoan"
+                    to="/MangerUser"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Quản Lý Tài Khoản
@@ -517,7 +517,7 @@ const Navigation = () => {
                     d="M4.194 8.094a1.86 1.86 0 1 0 0-3.719a1.86 1.86 0 0 0 0 3.719M.523 13.479A3.68 3.68 0 0 1 1 11.704a3.711 3.711 0 0 1 3.195-1.868c1.31.003 2.55.727 3.195 1.868a3.68 3.68 0 0 1 .477 1.774m2.02-12.095v-.82m2.799 1.827l.671-.471m-6.271.471l-.672-.471m5.506 3.139a2.055 2.055 0 0 0-2.077-2.042a2.055 2.055 0 0 0-1.99 2.127a2.067 2.067 0 0 0 1.126 1.73v1a.227.227 0 0 0 .226.22h1.361a.227.227 0 0 0 .227-.22V6.855a2.07 2.07 0 0 0 1.128-1.797Z"
                   />
                 </svg>
-                <span className="hidden nav-item-name ml-3 ">
+                <span className="w-1/2 hidden nav-item-name ml-3 ">
                   Đề xuất biện pháp xử lý
                 </span>
                 {''}
@@ -529,7 +529,7 @@ const Navigation = () => {
             <>
               {/* Food safety certification registration */}
               <Link
-                to="/DangKyChungChiATTP"
+                to="/Register_ATTP"
                 className="flex items-center transition-transform transform hover:translate-x-2"
               >
                 <svg
@@ -569,6 +569,41 @@ const Navigation = () => {
                 </svg>
                 <span className="hidden nav-item-name ml-3">Hồ Sơ</span>
                 {''}
+              </Link>
+              {/* History  */}
+              <Link
+                to="/"
+                className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2rem"
+                  height="2rem"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h11l5 5v11q0 .825-.587 1.413T19 21zm2-4h10v-2H7zm0-4h10v-2H7zm8-4h4l-4-4zM7 9h5V7H7z"
+                  />
+                </svg>
+                <span className="hidden nav-item-name ml-3 ">
+                  Lịch Sử{'  >'}
+                </span>
+                {''}
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                  <Link
+                    to="/PlanTT_History"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Thanh Tra
+                  </Link>
+                  <Link
+                    to="/PlanKTVP_History"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Kiểm Tra
+                  </Link>
+                </div>
               </Link>
             </>
           )}
@@ -645,7 +680,7 @@ const Navigation = () => {
           )}
           {/* Report */}
           <Link
-            to="/PhanAnhViPham"
+            to="/Report_violation"
             className="w-[70%] flex items-center transition-transform transform hover:translate-x-2"
           >
             <svg
@@ -659,7 +694,9 @@ const Navigation = () => {
                 d="M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m-1-4h2V7h-2zm-2.75 8L3 15.75v-7.5L8.25 3h7.5L21 8.25v7.5L15.75 21z"
               />
             </svg>
-            <span className="hidden nav-item-name ml-3">Phản Ánh Vi Phạm</span>
+            <span className="w-1/2 hidden nav-item-name ml-3">
+              Phản Ánh Vi Phạm
+            </span>
             {''}
           </Link>
         </div>
@@ -771,7 +808,7 @@ const Navigation = () => {
                   className="block px-4 py-2 hover:drop-shadow-[0_0px_2px_rgba(255,255,255,1)] rounded"
                   onClick={closeDropdown}
                 >
-                  Profile
+                  Thông tin cá nhân
                 </Link>
               </li>
               <li>
@@ -779,7 +816,7 @@ const Navigation = () => {
                   onClick={handleLogout}
                   className="block w-full px-4 py-2 text-left hover:drop-shadow-[0_0px_2px_rgba(255,255,255,1)] rounded"
                 >
-                  Logout
+                  Thoát
                 </button>
               </li>
             </ul>

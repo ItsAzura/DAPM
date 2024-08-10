@@ -16,6 +16,13 @@ import PlanTT_Report from '../pages/user/Plan/PlanTT_Report.jsx';
 import PlanKTVP_Report from '../pages/user/Plan/PlanKTVP_Report.jsx';
 import CreateReport from '../pages/user/Report/CreateReport.jsx';
 import CreatePDF from '../pages/user/Report/createPDF.jsx';
+import Report_violation from '../pages/user/Violation/Report_violation.jsx';
+import Approve from '../pages/user/ManagerUser/Approve.jsx';
+import MangerUser from '../pages/user/ManagerUser/MangerUser.jsx';
+import SearchUser from '../pages/user/SearchUser/SearchUser.jsx';
+import Register_ATTP from '../pages/user/ATTP/Register_ATTP.jsx';
+import PlanKTVP_History from '../pages/user/Plan/PlanKTVP_History.jsx';
+import PlanTT_History from '../pages/user/Plan/PlanTT_History.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +39,13 @@ const router = createBrowserRouter(
       <Route path="/ReportKTVP" element={<PlanKTVP_Report />} />
       <Route path="/createReport/:id" element={<CreateReport />} />
       <Route path="/createPDF/:id" element={<CreatePDF />} />
+      <Route path="/Report_violation" element={<Report_violation />} />
+      <Route path="/Approve" element={<Approve />} />
+      <Route path="/MangerUser" element={<MangerUser />} />
+      <Route path="/SearchUser" element={<SearchUser />} />
+      <Route path="/Register_ATTP" element={<Register_ATTP />} />
+      <Route path="/PlanKTVP_History" element={<PlanKTVP_History />} />
+      <Route path="/PlanTT_History" element={<PlanTT_History />} />
     </Route>
   )
 );

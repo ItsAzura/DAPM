@@ -40,7 +40,7 @@ const ListProfile = () => {
   return (
     <div className="pl-14">
       <h1 className="py-6 text-4xl font-semibold text-[#0cb306]">
-        Danh Sach Cơ Sở
+        Danh Sách Cơ Sở
       </h1>
       <ul className="w-full space-y-6 flex flex-col gap-4">
         {facility &&
