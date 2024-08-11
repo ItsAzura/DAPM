@@ -380,7 +380,7 @@ const Navigation = () => {
             <>
               {/* News */}
               <Link
-                to="/TinTuc"
+                to="/"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -400,13 +400,13 @@ const Navigation = () => {
                 {''}
                 <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
-                    to="/XemTinTuc"
+                    to="/ListNews"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Xem Tin Tức
                   </Link>
                   <Link
-                    to="/TaoTinTuc"
+                    to="/CreateNews"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Tạo Tin Tức
@@ -464,7 +464,7 @@ const Navigation = () => {
 
               {/* create report */}
               <Link
-                to="/o"
+                to="/"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -500,7 +500,7 @@ const Navigation = () => {
 
               {/* create propose */}
               <Link
-                to="/DeXuatBienPhapXuLy"
+                to="/propose_report"
                 className="w-1/2 flex items-center transition-transform transform hover:translate-x-2"
               >
                 <svg

@@ -23,6 +23,9 @@ import SearchUser from '../pages/user/SearchUser/SearchUser.jsx';
 import Register_ATTP from '../pages/user/ATTP/Register_ATTP.jsx';
 import PlanKTVP_History from '../pages/user/Plan/PlanKTVP_History.jsx';
 import PlanTT_History from '../pages/user/Plan/PlanTT_History.jsx';
+import ListNews from '../pages/user/News/ListNews.jsx';
+import CreateNews from '../pages/user/News/CreateNews.jsx';
+import Propose_report from '../pages/user/Violation/propose_report.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,6 +49,9 @@ const router = createBrowserRouter(
       <Route path="/Register_ATTP" element={<Register_ATTP />} />
       <Route path="/PlanKTVP_History" element={<PlanKTVP_History />} />
       <Route path="/PlanTT_History" element={<PlanTT_History />} />
+      <Route path="/ListNews" element={<ListNews />} />
+      <Route path="/CreateNews" element={<CreateNews />} />
+      <Route path="/propose_report" element={<Propose_report />} />
     </Route>
   )
 );
