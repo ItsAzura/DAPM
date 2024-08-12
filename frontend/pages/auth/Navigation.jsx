@@ -197,7 +197,7 @@ const Navigation = () => {
             <>
               {/* News */}
               <Link
-                to="/TinTuc"
+                to="/"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -217,13 +217,13 @@ const Navigation = () => {
                 {''}
                 <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
-                    to="/XemTinTuc"
+                    to="/ListNews"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Xem Tin Tức
                   </Link>
                   <Link
-                    to="/TaoTinTuc"
+                    to="/CreateNews"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Tạo Tin Tức
@@ -233,7 +233,7 @@ const Navigation = () => {
 
               {/* profile */}
               <Link
-                to="/HoSo"
+                to="/List_ATTP"
                 className="flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -250,27 +250,13 @@ const Navigation = () => {
                     />
                   </g>
                 </svg>
-                <span className="hidden nav-item-name ml-3 ">Hồ Sơ{'  >'}</span>
+                <span className="hidden nav-item-name ml-3 ">Hồ Sơ</span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
-                  <Link
-                    to="/XacNhanHoSo"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Xác nhận hồ sơ đăng ký
-                  </Link>
-                  <Link
-                    to="/YeuCauBoSung"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Yêu cầu bổ sung.
-                  </Link>
-                </div>
               </Link>
 
               {/* create plan */}
               <Link
-                to="/TaoKeHoach"
+                to="/"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -298,13 +284,13 @@ const Navigation = () => {
                 {''}
                 <div className="w-3/4 absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
-                    to="/KeHoachThanhTra"
+                    to="/PlanTT_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Kế Hoạch Thanh Tra
                   </Link>
                   <Link
-                    to="/KeHoachKiemTraViPham"
+                    to="/PlanKTVP_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Kế Hoạch Kiểm Tra Vi Phạm
@@ -314,7 +300,7 @@ const Navigation = () => {
 
               {/* create teams */}
               <Link
-                to="/LapDoanThanhTra"
+                to="/"
                 className="w-2/3 flex items-center transition-transform transform hover:translate-x-2 group"
               >
                 <svg
@@ -328,19 +314,19 @@ const Navigation = () => {
                     d="M12.5 4.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m5 .5a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-13 2a2 2 0 1 0 0-4a2 2 0 0 0 0 4M6 9.25C6 8.56 6.56 8 7.25 8h5.5c.69 0 1.25.56 1.25 1.25V14a4 4 0 0 1-8 0zm-1 0c0-.463.14-.892.379-1.25H3.25C2.56 8 2 8.56 2 9.25V13a3 3 0 0 0 3.404 2.973A5 5 0 0 1 5 14zM15 14c0 .7-.144 1.368-.404 1.973Q14.794 16 15 16a3 3 0 0 0 3-3V9.25C18 8.56 17.44 8 16.75 8h-2.129c.24.358.379.787.379 1.25z"
                   />
                 </svg>
-                <span className="hidden nav-item-name ml-3 ">
+                <span className="w-1/2 hidden nav-item-name ml-3 ">
                   Lập Đoàn Thẩm Định{'  >'}
                 </span>
                 {''}
                 <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
-                    to="/LapDoanThanhTra"
+                    to="/TeamTT_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Thanh Tra
                   </Link>
                   <Link
-                    to="/LapDoanKiemTraViPham"
+                    to="/TeamKTVP_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Kiểm tra Vi Phạm
@@ -350,7 +336,7 @@ const Navigation = () => {
 
               {/* create report */}
               <Link
-                to="/LapBienBanXuLy"
+                to="/Createprocessingrecords"
                 className="w-3/4 flex items-center transition-transform transform hover:translate-x-2"
               >
                 <svg

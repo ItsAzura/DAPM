@@ -26,6 +26,13 @@ import PlanTT_History from '../pages/user/Plan/PlanTT_History.jsx';
 import ListNews from '../pages/user/News/ListNews.jsx';
 import CreateNews from '../pages/user/News/CreateNews.jsx';
 import Propose_report from '../pages/user/Violation/propose_report.jsx';
+import List_ATTP from '../pages/user/ATTP/List_ATTP.jsx';
+import Details_ATTP from '../pages/user/ATTP/Details_ATTP.jsx';
+import PlanKTVP_Create from '../pages/user/Plan/PlanKTVP_Create.jsx';
+import PlanTT_Create from '../pages/user/Plan/PlanTT_Create.jsx';
+import TeamTT_Create from '../pages/user/Teams/TeamTT_Create.jsx';
+import TeamKTVP_Create from '../pages/user/Teams/TeamKTVP_Create.jsx';
+import Createprocessingrecords from '../pages/user/Report/Createprocessingrecords.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -52,6 +59,16 @@ const router = createBrowserRouter(
       <Route path="/ListNews" element={<ListNews />} />
       <Route path="/CreateNews" element={<CreateNews />} />
       <Route path="/propose_report" element={<Propose_report />} />
+      <Route path="/List_ATTP" element={<List_ATTP />} />
+      <Route path="/Details_ATTP" element={<Details_ATTP />} />
+      <Route path="/PlanKTVP_Create" element={<PlanKTVP_Create />} />
+      <Route path="/PlanTT_Create" element={<PlanTT_Create />} />
+      <Route path="/TeamTT_Create" element={<TeamTT_Create />} />
+      <Route path="/TeamKTVP_Create" element={<TeamKTVP_Create />} />
+      <Route
+        path="/Createprocessingrecords"
+        element={<Createprocessingrecords />}
+      />
     </Route>
   )
 );
