@@ -27,8 +27,8 @@ const Profile = () => {
 
   console.log('currernfacility', currernfacility);
   return (
-    <div className="pl-14 ">
-      <h1 className="py-6 text-4xl font-semibold text-[#0cb306]">
+    <div className="pl-14 pb-4">
+      <h1 className="py-6 text-4xl font-semibold text-[#00CD00]">
         Hồ Sơ {currernfacility?.TenCoSo}
       </h1>
       <div className="w-1/2 p-4 flex flex-col gap-7 border bg-white rounded-md shadow-dashboard">

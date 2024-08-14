@@ -38,8 +38,8 @@ const ListProfile = () => {
   console.table('facility', facility);
 
   return (
-    <div className="pl-14">
-      <h1 className="py-6 text-4xl font-semibold text-[#0cb306]">
+    <div className="pl-14 pb-10">
+      <h1 className="py-6 text-4xl font-semibold text-[#00CD00]">
         Danh Sách Cơ Sở
       </h1>
       <ul className="w-full space-y-6 flex flex-col gap-4">

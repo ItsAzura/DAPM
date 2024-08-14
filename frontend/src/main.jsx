@@ -33,6 +33,8 @@ import PlanTT_Create from '../pages/user/Plan/PlanTT_Create.jsx';
 import TeamTT_Create from '../pages/user/Teams/TeamTT_Create.jsx';
 import TeamKTVP_Create from '../pages/user/Teams/TeamKTVP_Create.jsx';
 import Createprocessingrecords from '../pages/user/Report/Createprocessingrecords.jsx';
+import { Provider } from 'react-redux';
+import { store } from '../features/store.js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -74,5 +76,7 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

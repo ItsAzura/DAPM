@@ -91,7 +91,7 @@ const Navigation = () => {
       } xl:flex lg:flex md:hidden sm:hidden flex-col justify-between text-white bg-transparent w-[3%] hover:w-[30%] h-[100vh]  fixed `}
       id="navigation-container"
     >
-      <div className="h-full w-2/3 flex flex-col justify-between bg-[#0cb306] p-2 ">
+      <div className="h-full w-2/3 flex flex-col justify-between bg-[#00CD00] p-2 ">
         <div className="flex flex-col justify-center gap-y-6">
           <Link to="/" className="flex items-center justify-center mt-4">
             <img src={logo} alt="" className="w-[30%] rounded-full" />
@@ -175,7 +175,7 @@ const Navigation = () => {
                 <span className="hidden nav-item-name ml-3">
                   Tài Khoản{'  >'}
                 </span>
-                <div className="absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg w-48 z-100 ">
+                <div className="absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg w-48 z-100 ">
                   <Link
                     to="/Approve"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -215,7 +215,7 @@ const Navigation = () => {
                   Tin Tức{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/ListNews"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -282,7 +282,7 @@ const Navigation = () => {
                   Lập Kế Hoạch{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-48 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/PlanTT_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -318,7 +318,7 @@ const Navigation = () => {
                   Lập Đoàn Thẩm Định{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/TeamTT_Create"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -384,7 +384,7 @@ const Navigation = () => {
                   Tin Tức{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/ListNews"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -428,7 +428,7 @@ const Navigation = () => {
                   Kế Hoạch{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   {decodedToken && (
                     <>
                       <Link
@@ -468,7 +468,7 @@ const Navigation = () => {
                   Tạo Báo Cáo{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/ReportTT"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -576,7 +576,7 @@ const Navigation = () => {
                   Lịch Sử{'  >'}
                 </span>
                 {''}
-                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#0cb306] text-black border border-gray-300 rounded shadow-lg  z-100 ">
+                <div className="w-3/4 absolute top-0 left-40 mt-2 hidden group-hover:block bg-[#00CD00] text-black border border-gray-300 rounded shadow-lg  z-100 ">
                   <Link
                     to="/PlanTT_History"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -734,7 +734,7 @@ const Navigation = () => {
 
           {dropdownOpen && userInfo && (
             <ul
-              className={`absolute left-0  bottom-6   bg-[#0cb306] text-white border-solid border border-gray-300 rounded shadow-lg ${
+              className={`absolute left-0  bottom-6   bg-[#00CD00] text-white border-solid border border-gray-300 rounded shadow-lg ${
                 !userInfo.isAdmin ? '-top-24' : '-top-100'
               } `}
             >

@@ -124,7 +124,7 @@ const UpdateProfile = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
-        <h2 className="text-3xl font-semibold mb-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6 text-center text-[#00CD00]">
           Cập Nhật Hồ Sơ
         </h2>
         <form onSubmit={handleSubmit}>

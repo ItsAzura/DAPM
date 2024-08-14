@@ -39,7 +39,7 @@ const PlanKTVP = () => {
   };
 
   return (
-    <div className="pl-14">
+    <div className="pl-14 mb-8">
       <h1 className="py-6 text-4xl font-semibold text-[#0cb306]">
         Danh Sách Kế Hoạch Kiểm tra Vi Phạm
       </h1>

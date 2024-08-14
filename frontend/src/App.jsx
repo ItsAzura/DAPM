@@ -8,7 +8,7 @@ function App() {
     <>
       <ToastContainer />
       <Navigation />
-      <main className="py-3 h-fit ">
+      <main className=" h-fit ">
         <Outlet />
       </main>
       <Footer />

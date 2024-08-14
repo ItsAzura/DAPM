@@ -5,7 +5,7 @@ const List_ATTP = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
-        <h2 className="text-3xl font-semibold mb-6 text-center">
+        <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Danh Sách Hồ Sơ Đăng Ký ATTP
         </h2>
         <form>
@@ -13,43 +13,25 @@ const List_ATTP = () => {
             <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
               <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="overflow-hidden">
-                  <table class="min-w-full">
-                    <thead class="bg-gray-200 border-b">
+                  <table class="min-w-full bg-white">
+                    <thead class="bg-[#00CD00] text-white">
                       <tr>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           IDHoSo
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Tên Cơ Sở
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Địa Chỉ
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Chủ Cơ Sở
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Trạng Thái
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        ></th>
+                        <th className="text-sm font-medium px-6 py-4 text-left"></th>
                       </tr>
                     </thead>
                     <tbody>

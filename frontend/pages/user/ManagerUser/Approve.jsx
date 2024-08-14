@@ -3,70 +3,55 @@ import React from 'react';
 const Approve = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
-        <h2 className="text-3xl font-semibold mb-6 text-center">
-          Quản Lý Tài Khoản
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
+        <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
+          Duyệt Tài Khoản
         </h2>
         <form>
           <div class="flex flex-col">
             <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
               <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="overflow-hidden">
-                  <table class="min-w-full">
-                    <thead class="bg-gray-200 border-b">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <table className="min-w-full bg-white">
+                    <thead className="bg-[#00CD00] text-white">
                       <tr>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           IDUser
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Họ Tên
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           CCCD
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        >
+                        <th className="text-sm font-medium px-6 py-4 text-left">
                           Số Điện Thoại
                         </th>
-                        <th
-                          scope="col"
-                          class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                        ></th>
+                        <th className="text-sm font-medium px-6 py-4 text-left"></th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           User001
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           Nguyễn Văn A
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           1234567890
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           0123456789
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          <div className="mt-6 flex justify-center space-x-4 items-center">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <div className=" flex justify-center space-x-4 items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="2rem"
                               height="2rem"
                               viewBox="0 0 24 24"
-                              className="text-green-500"
+                              className="text-[#00CD00]"
                             >
                               <path
                                 fill="currentColor"
@@ -90,27 +75,27 @@ const Approve = () => {
                           </div>
                         </td>
                       </tr>
-                      <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           User002
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          Nguyễn Văn B
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          Nguyễn Văn A
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           1234567890
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           0123456789
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          <div className="mt-6 flex justify-center space-x-4 items-center">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <div className=" flex justify-center space-x-4 items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="2rem"
                               height="2rem"
                               viewBox="0 0 24 24"
-                              className="text-green-500"
+                              className="text-[#00CD00]"
                             >
                               <path
                                 fill="currentColor"
@@ -134,27 +119,27 @@ const Approve = () => {
                           </div>
                         </td>
                       </tr>
-                      <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           User003
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          Nguyễn Văn C
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          Nguyễn Văn A
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           1234567890
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           0123456789
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          <div className="mt-6 flex justify-center space-x-4 items-center">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <div className=" flex justify-center space-x-4 items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="2rem"
                               height="2rem"
                               viewBox="0 0 24 24"
-                              className="text-green-500"
+                              className="text-[#00CD00]"
                             >
                               <path
                                 fill="currentColor"
@@ -178,27 +163,27 @@ const Approve = () => {
                           </div>
                         </td>
                       </tr>
-                      <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           User004
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          Nguyễn Văn D
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          Nguyễn Văn A
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           1234567890
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           0123456789
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          <div className="mt-6 flex justify-center space-x-4 items-center">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <div className=" flex justify-center space-x-4 items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="2rem"
                               height="2rem"
                               viewBox="0 0 24 24"
-                              className="text-green-500"
+                              className="text-[#00CD00]"
                             >
                               <path
                                 fill="currentColor"
@@ -222,27 +207,27 @@ const Approve = () => {
                           </div>
                         </td>
                       </tr>
-                      <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          User00
+                      <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          User005
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          Nguyễn Văn E
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          Nguyễn Văn A
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           1234567890
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           0123456789
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                          <div className="mt-6 flex justify-center space-x-4 items-center">
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          <div className=" flex justify-center space-x-4 items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="2rem"
                               height="2rem"
                               viewBox="0 0 24 24"
-                              className="text-green-500"
+                              className="text-[#00CD00]"
                             >
                               <path
                                 fill="currentColor"

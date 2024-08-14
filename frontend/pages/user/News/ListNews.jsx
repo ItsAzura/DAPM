@@ -20,7 +20,9 @@ const ListNews = () => {
   }, []);
   return (
     <div className="w-2/3 pl-14">
-      <h1 className="text-4xl font-semibold my-6 ">Danh Sách Tin Tức</h1>
+      <h1 className="text-4xl font-semibold mb-6  text-[#00CD00] ">
+        Danh Sách Tin Tức
+      </h1>
       <div className="flex flex-col gap-4">
         {news.map((n, i) => (
           <div key={i} className="flex flex-row gap-4 border-b pb-2">

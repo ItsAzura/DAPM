@@ -10,8 +10,8 @@ const Createprocessingrecords = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
-        <h2 className="text-3xl font-semibold mb-6 text-center">
-          Tạo Biên Bản Xư Lý
+        <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
+          Tạo Biên Bản Xử Lý
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-6">
