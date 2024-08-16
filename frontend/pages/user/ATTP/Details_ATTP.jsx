@@ -22,8 +22,8 @@ const Details_ATTP = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 mb-8">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl mt-8">
         <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Chi Tiết Hồ Sơ
         </h2>
@@ -39,7 +39,7 @@ const Details_ATTP = () => {
                 id="tenCoSo"
                 value={TenCoSo}
                 onChange={(e) => setTenCoSo(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded border-solid focus:border-[#0cb306] hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -50,7 +50,7 @@ const Details_ATTP = () => {
                 type="text"
                 id="chuCoSo"
                 value={ChuCoSo}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -64,7 +64,7 @@ const Details_ATTP = () => {
                 id="diaChi"
                 value={DiaChi}
                 onChange={(e) => setDiaChi(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded border-solid focus:border-[#0cb306] hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -80,7 +80,7 @@ const Details_ATTP = () => {
                 id="loaiHinhKinhDoanh"
                 value={IdLoaiHinhKinhDoanh}
                 onChange={(e) => setIdLoaiHinhKinhDoanh(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded border-solid focus:border-[#0cb306] hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -93,7 +93,7 @@ const Details_ATTP = () => {
                 id="SoGiayPhepKD"
                 value={SoGiayPhepKD}
                 onChange={(e) => setSoGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded border-solid focus:border-[#0cb306] hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -109,7 +109,7 @@ const Details_ATTP = () => {
                 id="NgayCapGiayPhepKD"
                 value={NgayCapGiayPhepKD}
                 onChange={(e) => setNgayCapGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded border-solid focus:border-[#0cb306] hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -120,7 +120,7 @@ const Details_ATTP = () => {
                 type="text"
                 id="ngayCapATTP"
                 value={NgayCapATTP}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -135,7 +135,7 @@ const Details_ATTP = () => {
                 type="text"
                 id="ngayHetHanATTP"
                 value={NgayHetHanATTP}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -179,7 +179,7 @@ const Details_ATTP = () => {
                 rows={6}
                 type="text"
                 id="nd"
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <button

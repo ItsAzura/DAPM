@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between px-14 py-6 bg-gray-100 min-h-screen gap-10">
+    <div className="flex flex-row justify-between px-14 py-8 bg-gray-100 min-h-screen gap-10">
       <div className="w-2/3">
         <h1 className="text-4xl font-semibold text-[#00CD00] mb-8">
           Chào Mừng Bạn Đến với Hệ Thống An Toàn Vệ Sinh Thực Phẩm Thành Phố Đà
@@ -30,11 +30,11 @@ const Home = () => {
           BẢN TIN
         </h2>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 ">
           {news.map((n, i) => (
             <div
               key={i}
-              className="flex flex-row gap-6 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-row gap-6 bg-white p-4 rounded-lg shadow-md hover:drop-shadow-[0_0px_3px_rgba(12,179,6,1)] transition-shadow duration-300 delay-700"
             >
               <img
                 src={n.AnhBia}
@@ -61,7 +61,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-1/3 mt-16">
+      <div className="w-1/3 mt-[90px]">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">
             TIN ĐỌC NHIỀU

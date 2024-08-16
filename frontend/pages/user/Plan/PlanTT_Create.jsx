@@ -10,7 +10,7 @@ const PlanTT_Create = () => {
   const handleSubmit = async (e) => {};
   return (
     <div className="mb-8 flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl mt-8">
         <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Tạo Kế Hoạch Thanh Tra
         </h2>
@@ -24,7 +24,7 @@ const PlanTT_Create = () => {
                 type="text"
                 id="TieuDe"
                 value={TieuDe}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -37,7 +37,7 @@ const PlanTT_Create = () => {
                 id="Desp"
                 value={Desp}
                 onChange={(e) => setDesp(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
           </div>
@@ -48,11 +48,11 @@ const PlanTT_Create = () => {
             <textarea
               type="text"
               id="content"
-              cols={30}
+              cols={20}
               rows={10}
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
             />
           </div>
 

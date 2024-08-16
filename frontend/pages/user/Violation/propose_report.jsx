@@ -22,7 +22,7 @@ const Propose_report = () => {
                 type="text"
                 id="TieuDe"
                 value={TieuDe}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -35,7 +35,7 @@ const Propose_report = () => {
                 id="Desp"
                 value={Desp}
                 onChange={(e) => setDesp(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
           </div>
@@ -50,7 +50,7 @@ const Propose_report = () => {
               rows={10}
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
             />
           </div>
 

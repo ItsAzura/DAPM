@@ -8,8 +8,8 @@ const MangerUser = () => {
   const [MatKhau, setMatKhau] = useState('');
   const handleSubmit = async (e) => {};
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 mb-8">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl mt-8">
         <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Quản Lý Tài Khoản
         </h2>
@@ -24,7 +24,7 @@ const MangerUser = () => {
                 id="UserName"
                 value={UserName}
                 onChange={(e) => setUserName(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -36,7 +36,7 @@ const MangerUser = () => {
                 id="ChucVu"
                 value={ChucVu}
                 onChange={(e) => setChucVu(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -48,7 +48,7 @@ const MangerUser = () => {
                 id="CCCD"
                 value={CCCD}
                 onChange={(e) => setCCCD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -60,7 +60,7 @@ const MangerUser = () => {
                 id="MatKhau"
                 value={MatKhau}
                 onChange={(e) => setMatKhau(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <button

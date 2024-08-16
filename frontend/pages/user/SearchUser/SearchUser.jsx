@@ -5,8 +5,8 @@ const SearchUser = () => {
   const [UserName, setUserName] = useState('');
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-5xl">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 mb-8">
+      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-5xl mt-8">
         <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Tìm Kiếm Hồ Sơ Đăng Ký ATTP
         </h2>
@@ -23,7 +23,7 @@ const SearchUser = () => {
               id="UserName"
               value={UserName}
               onChange={(e) => setUserName(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
               placeholder="Tìm Kiếm theo cơ sở, họ tên, CCCD, SĐT"
             />
           </div>
@@ -31,13 +31,13 @@ const SearchUser = () => {
             <div className="flex-1">
               <label
                 htmlFor="PhuongXa"
-                className="block mb-3 font-medium text-gray-700"
+                className="block mb-3 font-medium text-gray-700 "
               >
                 Lọc theo Phường Xã
               </label>
               <select
                 id="PhuongXa"
-                className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
               >
                 {/* Add options here */}
               </select>
@@ -51,7 +51,7 @@ const SearchUser = () => {
               </label>
               <select
                 id="QuanHuyen"
-                className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
               >
                 {/* Add options here */}
               </select>
@@ -66,7 +66,7 @@ const SearchUser = () => {
               <input
                 type="date"
                 id="StartDate"
-                className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
               />
             </div>
             <div className="flex-1">
@@ -79,7 +79,7 @@ const SearchUser = () => {
               <input
                 type="date"
                 id="EndDate"
-                className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
               />
             </div>
           </div>

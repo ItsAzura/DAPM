@@ -19,7 +19,7 @@ const ListNews = () => {
     fetchNews();
   }, []);
   return (
-    <div className="w-2/3 pl-14">
+    <div className="w-2/3 pl-14 py-8">
       <h1 className="text-4xl font-semibold mb-6  text-[#00CD00] ">
         Danh Sách Tin Tức
       </h1>

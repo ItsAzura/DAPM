@@ -122,8 +122,8 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 mb-8">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl mt-8">
         <h2 className="text-4xl font-semibold mb-6 text-center text-[#00CD00]">
           Cập Nhật Hồ Sơ
         </h2>
@@ -137,7 +137,7 @@ const UpdateProfile = () => {
                 type="text"
                 id="idCoSo"
                 value={IdCoSo}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out transform "
                 readOnly
               />
             </div>
@@ -150,7 +150,7 @@ const UpdateProfile = () => {
                 id="tenCoSo"
                 value={TenCoSo}
                 onChange={(e) => setTenCoSo(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -161,7 +161,7 @@ const UpdateProfile = () => {
                 type="text"
                 id="chuCoSo"
                 value={ChuCoSo}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out transform"
                 readOnly
               />
             </div>
@@ -174,7 +174,7 @@ const UpdateProfile = () => {
                 id="diaChi"
                 value={DiaChi}
                 onChange={(e) => setDiaChi(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform "
               />
             </div>
             <div>
@@ -186,7 +186,7 @@ const UpdateProfile = () => {
                 id="QuanHuyen"
                 value={IdQuanHuyen}
                 onChange={(e) => setIdQuanHuyen(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               >
                 {QuanHuyenSelector &&
                   QuanHuyenSelector.map((qh, i) => (
@@ -205,7 +205,7 @@ const UpdateProfile = () => {
                 id="PhuongXa"
                 value={IdPhuongXa}
                 onChange={(e) => setIdPhuongXa(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               >
                 {PhuongXaSelector &&
                   PhuongXaSelector.map((px, i) => (
@@ -227,7 +227,7 @@ const UpdateProfile = () => {
                 id="loaiHinhKinhDoanh"
                 value={IdLoaiHinhKinhDoanh}
                 onChange={(e) => setIdLoaiHinhKinhDoanh(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               >
                 {KDSelector &&
                   KDSelector.map((kd, i) => (
@@ -246,7 +246,7 @@ const UpdateProfile = () => {
                 id="SoGiayPhepKD"
                 value={SoGiayPhepKD}
                 onChange={(e) => setSoGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -261,7 +261,7 @@ const UpdateProfile = () => {
                 id="NgayCapGiayPhepKD"
                 value={NgayCapGiayPhepKD}
                 onChange={(e) => setNgayCapGiayPhepKD(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -272,7 +272,7 @@ const UpdateProfile = () => {
                 type="date"
                 id="ngayCapATTP"
                 value={NgayCapATTP}
-                className="w-full p-2 border border-gray-300 rounded  "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition  duration-300 ease-in-out transform"
                 readOnly
               />
             </div>
@@ -287,7 +287,7 @@ const UpdateProfile = () => {
                 type="date"
                 id="ngayHetHanATTP"
                 value={NgayHetHanATTP}
-                className="w-full p-2 border border-gray-300 rounded  "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out transform "
                 readOnly
               />
             </div>

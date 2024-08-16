@@ -72,7 +72,7 @@ const CreateReport = () => {
   }, [id]);
 
   return (
-    <div className="pl-14">
+    <div className="pl-14 mb-8">
       <h1 className="py-6 text-4xl font-semibold text-[#0cb306]">
         Tạo Báo Cáo
       </h1>
@@ -89,7 +89,7 @@ const CreateReport = () => {
             id="IdKeHoach"
             name="IdKeHoach"
             value={IdKeHoach}
-            className="p-2 border border-gray-300 rounded-md"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
             readOnly
           />
         </div>
@@ -101,8 +101,10 @@ const CreateReport = () => {
             id="NoiDung"
             name="NoiDung"
             value={NoiDung}
+            cols={30}
+            role={10}
             onChange={(e) => setNoiDung(e.target.value)}
-            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -114,7 +116,7 @@ const CreateReport = () => {
             id="file"
             name="file"
             onChange={(e) => setFile(e.target.files[0])}
-            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -126,7 +128,7 @@ const CreateReport = () => {
             name="CoViPham"
             value={CoViPham}
             onChange={(e) => setCoViPham(e.target.value === 'true')}
-            className="p-2 border border-gray-300 rounded-md border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
           >
             <option value="true">Có</option>
             <option value="false">Không</option>

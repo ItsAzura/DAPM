@@ -9,8 +9,8 @@ const TeamKTVP_Create = () => {
 
   const handleSubmit = async (e) => {};
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 mb-8">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-6xl mt-8">
         <h2 className="text-4xl font-semibold mb-8 text-center text-[#00CD00]">
           Lập Đoàn Kiểm Tra Vi Phạm
         </h2>
@@ -24,7 +24,7 @@ const TeamKTVP_Create = () => {
                 type="text"
                 id="TieuDe"
                 value={TieuDe}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -37,7 +37,7 @@ const TeamKTVP_Create = () => {
                 id="Desp"
                 value={Desp}
                 onChange={(e) => setDesp(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
             <div>
@@ -48,7 +48,7 @@ const TeamKTVP_Create = () => {
                 type="date"
                 id="TieuDe"
                 value={TieuDe}
-                className="w-full p-2 border border-gray-300 rounded "
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
                 readOnly
               />
             </div>
@@ -61,7 +61,7 @@ const TeamKTVP_Create = () => {
                 id="Desp"
                 value={Desp}
                 onChange={(e) => setDesp(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded  border-solid focus:border-[#0cb306]  hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] transition duration-300 ease-in-out transform focus:-translate-y-1 text-black"
+                className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform focus:-translate-y-1"
               />
             </div>
           </div>
@@ -76,36 +76,36 @@ const TeamKTVP_Create = () => {
                 <input
                   type="text"
                   value="Nguyễn Văn A"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
                 <input
                   type="text"
                   value="Trưởng Đoàn"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
               </div>
               <div className="flex gap-4 mb-4">
                 <input
                   type="text"
                   value="Nguyễn Văn B"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
                 <input
                   type="text"
                   value="Phó Đoàn"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
               </div>
               <div className="flex gap-4">
                 <input
                   type="text"
                   value="Nguyễn Văn C"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
                 <input
                   type="text"
                   value="Thư Ký"
-                  className="w-1/4 p-2 border border-gray-300 rounded "
+                  className="w-1/4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 transition hover:drop-shadow-[0_0px_4px_rgba(12,179,6,1)] duration-300 ease-in-out transform"
                 />
               </div>
             </div>
